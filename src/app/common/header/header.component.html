@@ -1,0 +1,16 @@
+<mat-toolbar>
+  <span>{{'header.title'|translate}}</span>
+
+    <mat-select [value]="translate.currentLang" class="lang" #languageSelect (selectionChange)="useLanguage(languageSelect.value)">
+    @for(lang of translate.getLangs(); track lang) {
+      <mat-option [value]="lang">
+        {{lang}}
+      </mat-option>
+    }
+  </mat-select>
+
+
+
+</mat-toolbar>
+
+
