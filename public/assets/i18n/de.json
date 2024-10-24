@@ -1,4 +1,7 @@
 {
+	"dashboard.title": "Dashboard",
 	"header.title": "TPDB Admin-Portal",
-	"home.slug": "Willkommen im Portal"
+	"home.title": "Wilcommen am Themepark Database",
+	"sidemenu.dashboard": "Dashboard",
+	"sidemenu.home": "Zum hause"
 }

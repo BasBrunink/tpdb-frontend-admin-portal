@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterModule} from '@angular/router';
 import {TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HeaderComponent} from './common/header/header.component';
+import {MatDrawer, MatDrawerContainer} from '@angular/material/sidenav';
+import {SideMenuComponent} from './common/side-menu/side-menu.component';
+import {routes} from './app.routes';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TranslateModule, HeaderComponent],
+  imports: [RouterModule, TranslateModule, HeaderComponent, MatDrawerContainer, MatDrawer, SideMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

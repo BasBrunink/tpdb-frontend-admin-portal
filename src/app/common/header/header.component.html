@@ -1,16 +1,25 @@
 <mat-toolbar>
-  <span>{{'header.title'|translate}}</span>
+  <button mat-icon-button class="header-icon" (click)="toggleSideNav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>
+    {{'header.title'|translate}}
+  </span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="header-icon">
+    <mat-icon>person</mat-icon>
+  </button>
 
-    <mat-select [value]="translate.currentLang" class="lang" #languageSelect (selectionChange)="useLanguage(languageSelect.value)">
-    @for(lang of translate.getLangs(); track lang) {
-      <mat-option [value]="lang">
-        {{lang}}
-      </mat-option>
+<!--  TODO: Display Icon with the select-->
+  <mat-select [value]="currentLanguage"  (selectionChange)="useLanguage($event.value)">
+    @for(lang of languageMap.keys(); track lang) {
+    <mat-option  [value]="lang">
+      <span class=" flag-icon fi {{ languageMap.get(lang)?.icon }}"></span>
+      {{ languageMap.get(lang)?.name }}
+
+    </mat-option>
     }
   </mat-select>
-
-
-
 </mat-toolbar>
 
 

@@ -7,6 +7,8 @@ import {HttpClient, provideHttpClient} from '@angular/common/http';
 
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {provideRouter, RouterModule} from '@angular/router';
+import {routes} from './app.routes';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -15,6 +17,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideRouter(routes),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(),
     importProvidersFrom(

@@ -1,4 +1,7 @@
 {
-	"header.title": "TPDB Beheerportaal",
-	"home.slug": "Welkom bij het portaal"
+	"dashboard.title": "Dashboard",
+	"header.title": "TPDB TPDB Admin Portal",
+	"home.title": "Welkom op de Portal van Theme Park Database",
+	"sidemenu.dashboard": "Dashboard",
+	"sidemenu.home": "Thuis"
 }
